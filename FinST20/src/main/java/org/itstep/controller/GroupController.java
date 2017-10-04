@@ -21,7 +21,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping(value = "/group")
+@RequestMapping(value = "/group") // с пом этой строки можем попасть на этот обьект
 public class GroupController {
 
 	@Autowired

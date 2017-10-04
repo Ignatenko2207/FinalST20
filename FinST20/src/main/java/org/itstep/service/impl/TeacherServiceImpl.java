@@ -13,7 +13,7 @@ public class TeacherServiceImpl implements TeacherService {
 
 	@Override
 	public Teacher getTeacher(String login) {
-		return teacherDAO.getOne(login);
+		return teacherDAO.findOne(login);
 	}
 
 	@Override
@@ -22,8 +22,8 @@ public class TeacherServiceImpl implements TeacherService {
 	}
 
 	@Override
-	public void deleteTeacher(Teacher teacher) {
-		teacherDAO.delete(teacher.getLogin());
+	public void deleteTeacher(String login) {
+		teacherDAO.delete(login);
 		
 	}
 }
