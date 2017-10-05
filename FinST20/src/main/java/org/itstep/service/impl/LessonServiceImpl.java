@@ -32,7 +32,6 @@ public class LessonServiceImpl implements LessonService {
 	@Override
 	public Lesson getOneByTeacherAndStartTime(String teacher, Long startTime) {
 		return lessonDAO.getOneByTeacherAndStartTime(teacher, startTime);
-
 	}
 
 	@Override
