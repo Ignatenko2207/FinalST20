@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 import java.util.List;
 import org.itstep.App;
 import org.itstep.dao.pojo.Group;
-import org.itstep.dao.pojo.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +33,7 @@ public class GroupDAOTest {
 		Group group = new Group();
 		group.setGroupName("ST20");
 		group.setCourse(3);
-		Group groupFromDB = groupDAO.save(group);
+		Group groupFromDB = groupDAO.saveAndFlush(group);
 		assertNotNull(groupFromDB);
 		Group checkedGroup = groupDAO.findOne(groupFromDB.getGroupName());
 		assertNotNull(checkedGroup);
